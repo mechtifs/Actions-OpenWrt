@@ -13,11 +13,18 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# Install Argon Theme
+# Modify defult language
+sed -i 's/+@LUCI_LANG_zh-cn/d' package/lean/default-settings/Makefile
+
+# Modify defult theme
+sed -i 's/Bootstrap/Argon/g' package/feeds/luci/luci/Makefile
+sed -i 's/bootstrap/argon/g' package/feeds/luci/luci/Makefile
+
+# Install argon theme
 rm -rf package/lean/luci-theme-argon 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
 
-# Install Hello World
+# Install wello world
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
