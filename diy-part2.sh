@@ -14,7 +14,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # Modify defult language
-sed -i 's/+@LUCI_LANG_zh-cn/d' package/lean/default-settings/Makefile
+sed -i 's/ +@LUCI_LANG_zh-cn//g' package/lean/default-settings/Makefile
 
 # Modify defult theme
 sed -i 's/Bootstrap/Argon/g' package/feeds/luci/luci/Makefile
