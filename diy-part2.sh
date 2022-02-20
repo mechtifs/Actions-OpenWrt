@@ -23,5 +23,5 @@ sed -i 's/Bootstrap/Argon/g' package/feeds/luci/luci/Makefile
 sed -i 's/bootstrap/argon/g' package/feeds/luci/luci/Makefile
 
 # Install argon theme
-rm -rf package/lean/luci-theme-argon 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
