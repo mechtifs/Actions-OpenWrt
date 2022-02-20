@@ -19,8 +19,10 @@ sed -i "/zh-cn/d" package/lean/default-settings/Makefile
 sed -i "s/'zh-cn'/'en'/g" feeds/luci/luci.mk
 
 # Modify default theme
-sed -i 's/Bootstrap/Argon/g' package/feeds/luci/luci/Makefile
-sed -i 's/bootstrap/argon/g' package/feeds/luci/luci/Makefile
+sed -i "s/Bootstrap/Argon/g" feeds/luci/collections/luci/Makefile
+sed -i "s/ +luci-theme-bootstrap//g" feeds/luci/collections/luci/Makefile
+sed -i "s/Bootstrap/Argon/g" package/feeds/luci/luci/Makefile
+sed -i "s/bootstrap/argon/g" package/feeds/luci/luci/Makefile
 
 # Install argon theme
 rm -rf feeds/luci/themes/luci-theme-argon
