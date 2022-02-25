@@ -1,7 +1,7 @@
 #!/bin/sh
-mkdir -p feeds/packages/lang/python/python-pytelegramapi
+mkdir -p feeds/packages/lang/python/python-pytelegrambotapi
 
-cat << EOF0 > feeds/packages/lang/python/python-pytelegramapi/Makefile
+cat << EOF0 > feeds/packages/lang/python/python-pytelegrambotapi/Makefile
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -9,7 +9,7 @@ cat << EOF0 > feeds/packages/lang/python/python-pytelegramapi/Makefile
 
 include \$(TOPDIR)/rules.mk
 
-PKG_NAME:=python-pytelegramapi
+PKG_NAME:=python-pytelegrambotapi
 PKG_VERSION:=4.4.0
 PKG_RELEASE:=1
 
@@ -24,7 +24,7 @@ include ../pypi.mk
 include \$(INCLUDE_DIR)/package.mk
 include ../python3-package.mk
 
-define Package/python3-pytelegramapi
+define Package/python3-pytelegrambotapi
   SUBMENU:=Python
   SECTION:=lang
   CATEGORY:=Languages
@@ -34,19 +34,19 @@ define Package/python3-pytelegramapi
 	+python3-pillow
 endef
 
-define Package/python3-pytelegramapi/description
+define Package/python3-pytelegrambotapi/description
   A simple, but extensible Python implementation for the Telegram Bot API.
   Supports both sync and async ways.
 endef
 
-\$(eval \$(call Py3Package,python3-pytelegramapi))
-\$(eval \$(call BuildPackage,python3-pytelegramapi))
+\$(eval \$(call Py3Package,python3-pytelegrambotapi))
+\$(eval \$(call BuildPackage,python3-pytelegrambotapi))
 EOF0
 
 cat << EOF1 >> feeds/packages.index
-Source-Makefile: feeds/packages/lang/python/python-pytelegramapi/Makefile
+Source-Makefile: feeds/packages/lang/python/python-pytelegrambotapi/Makefile
 
-Package: python3-pytelegramapi
+Package: python3-pytelegrambotapi
 Submenu: Python
 Version: 4.4.0-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +python3-pillow
